@@ -11,12 +11,14 @@ namespace RoxDecryptCSharp
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
-        [STAThread]
+        [STAThread]  // For single threading, I think.
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            FormMainWindow form = new FormMainWindow();
+            CipherWindowProperties.form = form;
+            Application.Run(form);
         }
     }
 }
