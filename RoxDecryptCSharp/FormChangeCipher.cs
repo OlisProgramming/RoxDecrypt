@@ -32,11 +32,24 @@ namespace RoxDecryptCSharp
                     CipherWindowProperties.Cipher = CipherWindowProperties.CipherType.ATBASH;
                     break;
 
+                case "ROT13":
+                    CipherWindowProperties.Cipher = CipherWindowProperties.CipherType.ROT13;
+                    break;
+
+                case "Caesar":
+                    CipherWindowProperties.Cipher = CipherWindowProperties.CipherType.CAESAR;
+                    break;
+
                 default:
                     return;
             }
 
             Close();
+        }
+
+        private void FormChangeCipher_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

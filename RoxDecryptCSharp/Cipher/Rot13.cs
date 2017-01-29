@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace RoxDecryptCSharp.Cipher
 {
-    public class Atbash : ICipher
+    class Rot13 : ICipher
     {
         public string Encrypt(string text)
         {
-            return new MakeTrans(Util.alphabet, Util.alphabetRev).Translate(text);
+            return new MakeTrans(Util.alphabet, "NOPQRSTUVWXYZABCDEFGHIJKLM").Translate(text);
         }
 
         public string Decrypt(string text)
@@ -27,7 +26,7 @@ namespace RoxDecryptCSharp.Cipher
             string output = Encrypt(text);
 
             wnd.StepProgress();
-            wnd.SetProgressText("Atbash cipher cracked!");
+            wnd.SetProgressText("ROT13 cipher cracked!");
             wnd.SetOutputText(output);
         }
     }

@@ -18,6 +18,9 @@ namespace RoxDecryptCSharp
             Application.SetCompatibleTextRenderingDefault(false);
             FormMainWindow form = new FormMainWindow();
             CipherWindowProperties.form = form;
+
+            Cipher.NgramScore.Init();
+
             Application.Run(form);
         }
     }

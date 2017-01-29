@@ -10,5 +10,12 @@ namespace RoxDecryptCSharp.Cipher
     {
         public const string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         public const string alphabetRev = "ZYXWVUTSRQPONMLKJIHGFEDCBA";
+
+        public static string PrepareText(this string text)
+        {
+            return new string(
+                text.ToUpper().Where(c => (char.IsLetter(c))).ToArray()
+            );
+        }
     }
 }

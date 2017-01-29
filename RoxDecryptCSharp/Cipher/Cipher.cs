@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace RoxDecryptCSharp.Cipher
 {
@@ -10,6 +11,6 @@ namespace RoxDecryptCSharp.Cipher
     {
         string Encrypt(string text);
         string Decrypt(string text);
-        string Crack(string text);
+        void Crack(string text, FormMainWindow wnd);
     }
 }

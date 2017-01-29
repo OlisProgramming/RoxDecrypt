@@ -48,8 +48,11 @@
   <ItemGroup>
     <Compile Include="CipherWindowProperties.cs" />
     <Compile Include="Cipher\Atbash.cs" />
+    <Compile Include="Cipher\Caesar.cs" />
     <Compile Include="Cipher\Cipher.cs" />
     <Compile Include="Cipher\MakeTrans.cs" />
+    <Compile Include="Cipher\NgramScore.cs" />
+    <Compile Include="Cipher\Rot13.cs" />
     <Compile Include="Cipher\Util.cs" />
     <Compile Include="FormChangeCipher.cs">
       <SubType>Form</SubType>

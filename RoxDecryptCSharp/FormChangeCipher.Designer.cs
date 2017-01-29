@@ -37,10 +37,12 @@
             this.cipherComboBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cipherComboBox.FormattingEnabled = true;
             this.cipherComboBox.Items.AddRange(new object[] {
-            "Atbash"});
+            "Atbash",
+            "ROT13",
+            "Caesar"});
             this.cipherComboBox.Location = new System.Drawing.Point(12, 12);
             this.cipherComboBox.Name = "cipherComboBox";
-            this.cipherComboBox.Size = new System.Drawing.Size(208, 21);
+            this.cipherComboBox.Size = new System.Drawing.Size(267, 21);
             this.cipherComboBox.TabIndex = 0;
             this.cipherComboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -49,7 +51,7 @@
             this.button.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button.Location = new System.Drawing.Point(12, 54);
             this.button.Name = "button";
-            this.button.Size = new System.Drawing.Size(208, 23);
+            this.button.Size = new System.Drawing.Size(267, 23);
             this.button.TabIndex = 1;
             this.button.Text = "Select this cipher";
             this.button.UseVisualStyleBackColor = true;
@@ -59,11 +61,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(232, 89);
+            this.ClientSize = new System.Drawing.Size(291, 89);
             this.Controls.Add(this.button);
             this.Controls.Add(this.cipherComboBox);
             this.Name = "FormChangeCipher";
             this.Text = "Change Cipher";
+            this.Load += new System.EventHandler(this.FormChangeCipher_Load);
             this.ResumeLayout(false);
 
         }
