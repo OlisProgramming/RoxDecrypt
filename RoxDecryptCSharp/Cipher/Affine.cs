@@ -23,7 +23,7 @@ namespace RoxDecryptCSharp.Cipher
 
             for (int i = 0; i < 26; i++)
             {
-                outtab += Util.alphabet[(i * KeyA + KeyB) % 26];
+                outtab += Util.alphabet[(((i * KeyA + KeyB) % 26) + 26) % 26];
             }
 
             return new MakeTrans(Util.alphabet, outtab).Translate(text);
@@ -31,8 +31,14 @@ namespace RoxDecryptCSharp.Cipher
 
         public string Decrypt(string text)
         {
-            throw new NotImplementedException();
-            //return new MakeTrans(Util.alphabet.Substring(Key, 26 - Key) + Util.alphabet.Substring(0, Key), Util.alphabet).Translate(text);
+            string outtab = "";
+
+            for (int i = 0; i < 26; i++)
+            {
+                outtab += Util.alphabet[((((i - KeyB) * Util.ModInverse(KeyA, 26)) % 26) + 26) % 26];
+            }
+
+            return new MakeTrans(Util.alphabet, outtab).Translate(text);
         }
 
         public void Crack(string text, FormMainWindow wnd)
