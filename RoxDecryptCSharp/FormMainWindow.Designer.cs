@@ -43,8 +43,6 @@
             this.labelProgressBarPercent = new System.Windows.Forms.Label();
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.labelCipherDetails = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.textBoxKey3 = new System.Windows.Forms.TextBox();
             this.textBoxKey2 = new System.Windows.Forms.TextBox();
@@ -78,26 +76,24 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.textBoxOutput, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.textBoxInput, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.labelCipher, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 6);
-            this.tableLayoutPanel1.Controls.Add(this.labelCipherDetails, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxOutput, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxInput, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.labelCipher, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.labelCipherDetails, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 0, 4);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 27);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 7;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 2F));
+            this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 2F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.263158F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 94.73684F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 119F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(860, 522);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -108,11 +104,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxOutput.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxOutput.Location = new System.Drawing.Point(433, 117);
+            this.textBoxOutput.Location = new System.Drawing.Point(433, 114);
             this.textBoxOutput.Multiline = true;
             this.textBoxOutput.Name = "textBoxOutput";
             this.textBoxOutput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxOutput.Size = new System.Drawing.Size(424, 281);
+            this.textBoxOutput.Size = new System.Drawing.Size(424, 285);
             this.textBoxOutput.TabIndex = 1;
             // 
             // textBoxInput
@@ -122,11 +118,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxInput.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxInput.Location = new System.Drawing.Point(3, 117);
+            this.textBoxInput.Location = new System.Drawing.Point(3, 114);
             this.textBoxInput.Multiline = true;
             this.textBoxInput.Name = "textBoxInput";
             this.textBoxInput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxInput.Size = new System.Drawing.Size(424, 281);
+            this.textBoxInput.Size = new System.Drawing.Size(424, 285);
             this.textBoxInput.TabIndex = 0;
             // 
             // label1
@@ -134,7 +130,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 100);
+            this.label1.Location = new System.Drawing.Point(3, 96);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 13);
             this.label1.TabIndex = 2;
@@ -146,7 +142,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(790, 100);
+            this.label2.Location = new System.Drawing.Point(790, 96);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 13);
             this.label2.TabIndex = 3;
@@ -159,7 +155,7 @@
             this.labelCipher.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.labelCipher, 2);
             this.labelCipher.Font = new System.Drawing.Font("Segoe UI Light", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCipher.Location = new System.Drawing.Point(383, 9);
+            this.labelCipher.Location = new System.Drawing.Point(383, 7);
             this.labelCipher.Name = "labelCipher";
             this.labelCipher.Size = new System.Drawing.Size(94, 25);
             this.labelCipher.TabIndex = 4;
@@ -180,13 +176,13 @@
             this.tableLayoutPanel2.Controls.Add(this.buttonCrack, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.labelProgressBarText, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 1);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(433, 404);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(433, 405);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.44828F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.44828F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 43.10345F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(424, 115);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(424, 114);
             this.tableLayoutPanel2.TabIndex = 6;
             // 
             // buttonEncrypt
@@ -231,7 +227,7 @@
             this.labelProgressBarText.AutoSize = true;
             this.tableLayoutPanel2.SetColumnSpan(this.labelProgressBarText, 3);
             this.labelProgressBarText.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelProgressBarText.Location = new System.Drawing.Point(151, 83);
+            this.labelProgressBarText.Location = new System.Drawing.Point(151, 82);
             this.labelProgressBarText.Name = "labelProgressBarText";
             this.labelProgressBarText.Size = new System.Drawing.Size(121, 13);
             this.labelProgressBarText.TabIndex = 7;
@@ -286,38 +282,12 @@
             this.labelCipherDetails.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.labelCipherDetails, 2);
             this.labelCipherDetails.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCipherDetails.Location = new System.Drawing.Point(380, 63);
+            this.labelCipherDetails.Location = new System.Drawing.Point(380, 61);
             this.labelCipherDetails.Name = "labelCipherDetails";
             this.labelCipherDetails.Size = new System.Drawing.Size(100, 13);
             this.labelCipherDetails.TabIndex = 7;
             this.labelCipherDetails.Text = "No Cipher Details.";
             this.labelCipherDetails.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tableLayoutPanel1.SetColumnSpan(this.label3, 2);
-            this.label3.Location = new System.Drawing.Point(3, 97);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(854, 2);
-            this.label3.TabIndex = 8;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tableLayoutPanel1.SetColumnSpan(this.label4, 2);
-            this.label4.Location = new System.Drawing.Point(3, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(854, 2);
-            this.label4.TabIndex = 9;
             // 
             // tableLayoutPanel4
             // 
@@ -338,14 +308,14 @@
             this.tableLayoutPanel4.Controls.Add(this.buttonRandomKey2, 2, 2);
             this.tableLayoutPanel4.Controls.Add(this.buttonRandomKey3, 2, 3);
             this.tableLayoutPanel4.Controls.Add(this.textBoxKey1, 0, 1);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 404);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 405);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 4;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(424, 115);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(424, 114);
             this.tableLayoutPanel4.TabIndex = 10;
             // 
             // textBoxKey3
@@ -408,7 +378,7 @@
             this.labelKey3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelKey3.AutoSize = true;
             this.labelKey3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelKey3.Location = new System.Drawing.Point(218, 92);
+            this.labelKey3.Location = new System.Drawing.Point(218, 91);
             this.labelKey3.Name = "labelKey3";
             this.labelKey3.Size = new System.Drawing.Size(81, 13);
             this.labelKey3.TabIndex = 3;
@@ -445,7 +415,7 @@
             this.buttonRandomKey3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonRandomKey3.Enabled = false;
             this.buttonRandomKey3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRandomKey3.Location = new System.Drawing.Point(330, 86);
+            this.buttonRandomKey3.Location = new System.Drawing.Point(330, 85);
             this.buttonRandomKey3.Name = "buttonRandomKey3";
             this.buttonRandomKey3.Size = new System.Drawing.Size(88, 25);
             this.buttonRandomKey3.TabIndex = 6;
@@ -472,9 +442,11 @@
             this.statisticsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.menuStrip1.Size = new System.Drawing.Size(884, 24);
             this.menuStrip1.TabIndex = 50;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // cipherToolStripMenuItem
             // 
@@ -562,8 +534,6 @@
         private System.Windows.Forms.Button buttonDecrypt;
         private System.Windows.Forms.Button buttonCrack;
         private System.Windows.Forms.Label labelCipherDetails;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TextBox textBoxOutput;
         private System.Windows.Forms.ProgressBar progressBar;

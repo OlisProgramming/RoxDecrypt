@@ -289,5 +289,10 @@ namespace RoxDecryptCSharp
         {
             NgramScore.QuadgramScore.Score(textBoxInput.Text.PrepareText());
         }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }
