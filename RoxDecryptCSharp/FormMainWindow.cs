@@ -194,14 +194,14 @@ namespace RoxDecryptCSharp
                         MessageBox.Show("Key 2 is invalid: must be an integer.", "Invalid Key");
                         throw new InvalidOperationException();
                     }
-                    if (Util.ModInverse(a, 26) == -1 || a < 0 || a > 25)
+                    if (Util.ModInverse(a, 26) == -1 || a < 0 || a > 26)
                     {
-                        MessageBox.Show("Key 1 is invalid: it must be an odd number that is not 13, and between 0 and 25.", "Invalid Key");
+                        MessageBox.Show("Key 1 is invalid: it must be an odd number that is not 13, and between 0 and 26.", "Invalid Key");
                         throw new InvalidOperationException();
                     }
-                    if (b < 0 || b > 25)
+                    if (b < 0 || b > 26)
                     {
-                        MessageBox.Show("Key 2 is invalid: it must be between 0 and 25.", "Invalid Key");
+                        MessageBox.Show("Key 2 is invalid: it must be between 0 and 26.", "Invalid Key");
                         throw new InvalidOperationException();
                     }
                     cipher = new Affine(Convert.ToInt32(textBoxKey1.Text), Convert.ToInt32(textBoxKey2.Text));
@@ -247,13 +247,28 @@ namespace RoxDecryptCSharp
             {
                 textBoxKey1.Text = new string(Util.alphabet[random.Next(26)], 1);
             }
+            else if (CipherWindowProperties.Cipher == CipherWindowProperties.CipherType.AFFINE)
+            {
+                int i;
+                while (true)
+                {
+                    i = random.Next(13) * 2 + 1;
+                    if (i != 13) break;
+                }
+                textBoxKey1.Text = i.ToString();
+            }
 
             else throw new NotImplementedException();
         }
 
         private void buttonRandomKey2_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            if (CipherWindowProperties.Cipher == CipherWindowProperties.CipherType.AFFINE)
+            {
+                textBoxKey2.Text = (random.Next(26) + 1).ToString();
+            }
+
+            else throw new NotImplementedException();
         }
 
         private void buttonRandomKey3_Click(object sender, EventArgs e)
