@@ -51,6 +51,17 @@ namespace RoxDecryptCSharp
                 labelKey1.Text = "Key (1 character)";
                 buttonRandomKey1.Enabled = true;
             }
+
+            else if (CipherWindowProperties.Cipher == CipherWindowProperties.CipherType.AFFINE)
+            {
+                textBoxKey1.Enabled = true;
+                labelKey1.Text = "Key A (1-25 odd number, not 13)";
+                buttonRandomKey1.Enabled = true;
+
+                textBoxKey2.Enabled = true;
+                labelKey2.Text = "Key B (0-26)";
+                buttonRandomKey2.Enabled = true;
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -163,6 +174,10 @@ namespace RoxDecryptCSharp
                     cipher = new Caesar(new string(textBoxKey1.Text[0], 1).ToUpper()[0]);
                     break;
 
+                case CipherWindowProperties.CipherType.AFFINE:
+                    cipher = new Affine(Convert.ToInt32(textBoxKey1.Text), Convert.ToInt32(textBoxKey2.Text));
+                    break;
+
                 default:
                     return null;
             }
@@ -203,6 +218,18 @@ namespace RoxDecryptCSharp
             {
                 textBoxKey1.Text = new string(Util.alphabet[random.Next(26)], 1);
             }
+
+            else throw new NotImplementedException();
+        }
+
+        private void buttonRandomKey2_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void buttonRandomKey3_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         private void quadgramFrequencyAnalysisToolStripMenuItem_Click(object sender, EventArgs e)

@@ -17,5 +17,12 @@ namespace RoxDecryptCSharp.Cipher
                 text.ToUpper().Where(c => (char.IsLetter(c))).ToArray()
             );
         }
+
+        public static string ReverseString(this string text)
+        {
+            char[] array = text.ToCharArray();
+            Array.Reverse(array);
+            return new string(array);
+        }
     }
 }

@@ -40,6 +40,10 @@ namespace RoxDecryptCSharp
                     CipherWindowProperties.Cipher = CipherWindowProperties.CipherType.CAESAR;
                     break;
 
+                case "Affine":
+                    CipherWindowProperties.Cipher = CipherWindowProperties.CipherType.AFFINE;
+                    break;
+
                 default:
                     return;
             }

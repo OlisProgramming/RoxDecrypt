@@ -438,6 +438,7 @@
             this.buttonRandomKey2.TabIndex = 5;
             this.buttonRandomKey2.Text = "Random Key";
             this.buttonRandomKey2.UseVisualStyleBackColor = true;
+            this.buttonRandomKey2.Click += new System.EventHandler(this.buttonRandomKey2_Click);
             // 
             // buttonRandomKey3
             // 
@@ -450,6 +451,7 @@
             this.buttonRandomKey3.TabIndex = 6;
             this.buttonRandomKey3.Text = "Random Key";
             this.buttonRandomKey3.UseVisualStyleBackColor = true;
+            this.buttonRandomKey3.Click += new System.EventHandler(this.buttonRandomKey3_Click);
             // 
             // textBoxKey1
             // 

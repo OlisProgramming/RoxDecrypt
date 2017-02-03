@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CipherWindowProperties.cs" />
+    <Compile Include="Cipher\Affine.cs" />
     <Compile Include="Cipher\Atbash.cs" />
     <Compile Include="Cipher\Caesar.cs" />
     <Compile Include="Cipher\Cipher.cs" />

@@ -10,7 +10,7 @@ namespace RoxDecryptCSharp
     {
         public enum CipherType
         {
-            ATBASH, ROT13, CAESAR
+            ATBASH, ROT13, CAESAR, AFFINE
         };
 
         public static string Name(this CipherType type)
@@ -25,6 +25,9 @@ namespace RoxDecryptCSharp
 
                 case CipherType.CAESAR:
                     return "Caesar Shift Cipher";
+
+                case CipherType.AFFINE:
+                    return "Affine Cipher";
 
                 default:
                     return "No Cipher";

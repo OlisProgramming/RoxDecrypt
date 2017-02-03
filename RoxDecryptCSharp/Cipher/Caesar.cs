@@ -29,7 +29,9 @@ namespace RoxDecryptCSharp.Cipher
 
         public void Crack(string text, FormMainWindow wnd)
         {
-            wnd.InitialiseProgressBar(1);
+            wnd.InitialiseProgressBar(26);
+
+            string textRev = text.ReverseString();
 
             double best_score = 0.0;
             int best_key = 0;
@@ -50,7 +52,15 @@ namespace RoxDecryptCSharp.Cipher
                 wnd.StepProgress();
             }
 
-            wnd.SetOutputText(new Caesar(best_key).Decrypt(text).ToLower());
+            string output;
+            if (
+                NgramScore.QuadgramScore.Score(new Caesar(best_key).Decrypt(text)) >
+                NgramScore.QuadgramScore.Score(new Caesar(best_key).Decrypt(textRev)))
+                output = new Caesar(best_key).Decrypt(text);
+            else
+                output = new Caesar(best_key).Decrypt(textRev);
+
+            wnd.SetOutputText(output.ToLower());
         }
     }
 }

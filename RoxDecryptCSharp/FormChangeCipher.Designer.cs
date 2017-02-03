@@ -39,7 +39,8 @@
             this.cipherComboBox.Items.AddRange(new object[] {
             "Atbash",
             "ROT13",
-            "Caesar"});
+            "Caesar",
+            "Affine"});
             this.cipherComboBox.Location = new System.Drawing.Point(12, 12);
             this.cipherComboBox.Name = "cipherComboBox";
             this.cipherComboBox.Size = new System.Drawing.Size(267, 21);
