@@ -175,6 +175,35 @@ namespace RoxDecryptCSharp
                     break;
 
                 case CipherWindowProperties.CipherType.AFFINE:
+                    int a, b;
+                    try
+                    {
+                        a = Convert.ToInt32(textBoxKey1.Text);
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Key 1 is invalid: must be an integer.", "Invalid Key");
+                        throw new InvalidOperationException();
+                    }
+                    try
+                    {
+                        b = Convert.ToInt32(textBoxKey2.Text);
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Key 2 is invalid: must be an integer.", "Invalid Key");
+                        throw new InvalidOperationException();
+                    }
+                    if (Util.ModInverse(a, 26) == -1 || a < 0 || a > 25)
+                    {
+                        MessageBox.Show("Key 1 is invalid: it must be an odd number that is not 13, and between 0 and 25.", "Invalid Key");
+                        throw new InvalidOperationException();
+                    }
+                    if (b < 0 || b > 25)
+                    {
+                        MessageBox.Show("Key 2 is invalid: it must be between 0 and 25.", "Invalid Key");
+                        throw new InvalidOperationException();
+                    }
                     cipher = new Affine(Convert.ToInt32(textBoxKey1.Text), Convert.ToInt32(textBoxKey2.Text));
                     break;
 
