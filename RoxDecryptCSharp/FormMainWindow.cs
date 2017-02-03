@@ -124,6 +124,10 @@ namespace RoxDecryptCSharp
         public void SetProgressText(string text)
         {
             labelProgressBarText.Text = text;
+            labelProgressBarText.Invalidate();
+            labelProgressBarText.Update();
+            labelProgressBarText.Refresh();
+            Application.DoEvents();
         }
 
         public void SetOutputText(string text)
@@ -175,6 +179,11 @@ namespace RoxDecryptCSharp
                     break;
 
                 case CipherWindowProperties.CipherType.AFFINE:
+                    if (crack)
+                    {
+                        cipher = new Affine(1, 1);
+                        break;
+                    }
                     int a, b;
                     try
                     {
@@ -194,12 +203,12 @@ namespace RoxDecryptCSharp
                         MessageBox.Show("Key 2 is invalid: must be an integer.", "Invalid Key");
                         throw new InvalidOperationException();
                     }
-                    if (Util.ModInverse(a, 26) == -1 || a < 0 || a > 26)
+                    if (Util.ModInverse(a, 26) == -1 || a < 1 || a > 26)
                     {
                         MessageBox.Show("Key 1 is invalid: it must be an odd number that is not 13, and between 0 and 26.", "Invalid Key");
                         throw new InvalidOperationException();
                     }
-                    if (b < 0 || b > 26)
+                    if (b < 1 || b > 26)
                     {
                         MessageBox.Show("Key 2 is invalid: it must be between 0 and 26.", "Invalid Key");
                         throw new InvalidOperationException();
